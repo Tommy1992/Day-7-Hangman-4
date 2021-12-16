@@ -90,11 +90,11 @@ while not end_of_game:
     #If lives goes down to 0 then the game should stop and it should print "You lose."
     if not guess in chosen_word:
       lives -= 1
-      if lives == 0:    #intented if means the if statements is LESS often checked ==> GOOD
-        print ("You lose.")
+      if lives == 0:    #intended if-cond. means the if statements is LESS often checked ==> GOOD
         print ("Lives left: " + str(lives) + ".")
         print (stages[lives])
-        break
+        print ("You lose.")
+        break # break better than "end_of_game = True" 
     #Join all the elements in the list and turn it into a String.
     print(f"{' '.join(display)}")
 
